@@ -1,0 +1,19 @@
+{
+  "name": "premise-take-home-api",
+  "version": "1.0.0",
+  "description": "REST API for premise-take-home challenge",
+  "main": "lib/server.js",
+  "scripts": {
+    "test": "npm run test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cforsyth68/premise-take-home-api.git"
+  },
+  "author": "Charles A. Forsyth",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/cforsyth68/premise-take-home-api/issues"
+  },
+  "homepage": "https://github.com/cforsyth68/premise-take-home-api#readme"
+}
