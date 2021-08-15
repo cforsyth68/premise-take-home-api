@@ -69,6 +69,7 @@
   "dependencies": {
     "core-js": "^3.16.1",
     "fastify": "^3.20.2",
+    "fastify-cors": "^6.0.2",
     "fastify-swagger": "^4.8.4",
     "make-promises-safe": "^5.1.0",
     "regenerator-runtime": "^0.13.9"

@@ -2,7 +2,7 @@
 
 This Node project wraps the Breaking Bad API, it was built as an example of Charles Forsyth's coding prowess for Premier.
 
-Copyright 2020, and all rights reserved.
+© Copyright 2020, and all rights reserved.
 
 ## Documentation
 
