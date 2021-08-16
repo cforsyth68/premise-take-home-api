@@ -2,7 +2,7 @@ import getByNameHandler from "../../controllers/characters";
 
 const searchOptions = {
   schema: {
-    description: "Wrapper for Breaking Bad API",
+    description: "Wrapper for Breaking Bad API, search by character name.",
     response: {
       200: {
         type: "array",
