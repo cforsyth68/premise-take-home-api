@@ -23,7 +23,7 @@
     "test": "npm run lint:fix && jest",
     "docker:build": "docker build -t cforsyth/premise-api .",
     "docker:run": "docker run --init --rm --name premise-api-server -d -p 8000:8000 -t cforsyth/premise-api",
-    "docker:healthcheck-manual": "node node_modules/fastify-healthcheck/src/healthcheck http://localhost:8000/health"
+    "docker:healthcheck": "node node_modules/fastify-healthcheck/src/healthcheck http://localhost:8000/health"
   },
   "prettier": {
     "semi": true,
