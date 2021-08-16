@@ -1,43 +1,51 @@
 # REST API for Premise take-home project
 
-This Node project wraps the Breaking Bad API, it was built as an example of Charles Forsyth's coding prowess for Premier.
+This Node project wraps the Breaking Bad API, it was built as an example of Charles Forsyth's coding ability for Premier.
 
-© Copyright 2020, and all rights reserved.
+---
+
+<br />
 
 ## Documentation
 
 Launch application (See below), and browse to the following path for swagger documentation: http://localhost:8000/
 
-## Contribution
+---
 
-### Installation
+<br />
 
-`npm install`
+## Launching the service
 
-### Local development
+### `npm install`
 
-`npm start`
+Install dependency packages
 
-### Redistribution build
+### `npm run dev`
 
-`npm run serve`
+Launch application locally, with watch.
 
-### Testing
+### `npm start`
+
+Launch application locally, without watch.
+
+### `npm test`
 
 This command will run eslint, unit tests and prettification.
 
-`npm test`
+---
 
-# Docker
+<br />
 
-## `npm run docker:build`
+## Docker
+
+### `npm run docker:build`
 
 Builds the docker image.
 
-## `npm run docker:run`
+### `npm run docker:run`
 
 Runs the docker image locally.
 
-## `npm run docker:healthcheck`
+### `npm run docker:healthcheck`
 
 Checks the health of the docker image running on local machine
