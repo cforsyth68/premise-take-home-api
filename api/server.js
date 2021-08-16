@@ -33,7 +33,7 @@ process.on("SIGTERM", closeGracefully);
 
 // eslint-disable-next-line no-console
 console.log(
-  `Server running${config.isDocker === true ? "in docker container." : ""}. ${
+  `Server running${config.isDocker === true ? " in docker container." : ""}. ${
     config.serverUrl
   }`
 );
