@@ -1,6 +1,6 @@
 const swaggerConfig = {
   exposeRoute: true,
-  routePrefix: "/api/v1",
+  routePrefix: "/",
   swagger: {
     info: {
       title: "Premise Take-home API",

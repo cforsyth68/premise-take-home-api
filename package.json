@@ -2,7 +2,7 @@
   "name": "premise-take-home-api",
   "version": "1.0.0",
   "description": "REST API for premise-take-home challenge",
-  "main": "lib/server.js",
+  "main": "api/server.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/cforsyth68/premise-take-home-api.git"
@@ -14,13 +14,16 @@
   },
   "homepage": "https://github.com/cforsyth68/premise-take-home-api#readme",
   "scripts": {
-    "lint": "eslint lib --ext .js",
+    "lint": "eslint api --ext .js",
     "lint:fix": "npm run lint -- --fix",
     "clean": "rimraf dist/*",
-    "build": "npm run clean && babel lib -d dist",
-    "start": "npm run build && nodemon dist/server.js",
-    "serve": "npm run build && node dist/server.js",
-    "test": "jest"
+    "build": "babel api -d dist",
+    "start": "npm run build && node dist/server.js",
+    "dev": "npm run build && nodemon dist/server.js",
+    "test": "npm run lint:fix && jest",
+    "docker:build": "docker build -t cforsyth/premise-api .",
+    "docker:run": "docker run --init --rm --name premise-api-server -d -p 8000:8000 -t cforsyth/premise-api",
+    "docker:healthcheck-manual": "node node_modules/fastify-healthcheck/src/healthcheck http://localhost:8000/health"
   },
   "prettier": {
     "semi": true,
@@ -29,6 +32,28 @@
     "singleQuote": false,
     "quoteProps": "consistent",
     "endOfLine": "auto"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "verbose": true,
+    "bail": true,
+    "rootDir": "tests",
+    "collectCoverage": true,
+    "collectCoverageFrom": [
+      "**/*.{js,jsx}",
+      "!**/node_modules/**",
+      "!**/dist/**",
+      "!**/coverage/**"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 50,
+        "functions": 50,
+        "lines": 50,
+        "statements": 50
+      }
+    },
+    "coverageDirectory": "../coverage"
   },
   "devDependencies": {
     "@babel/cli": "^7.14.8",
@@ -51,7 +76,9 @@
     "core-js": "^3.16.1",
     "fastify": "^3.20.2",
     "fastify-cors": "^6.0.2",
+    "fastify-healthcheck": "^3.1.0",
     "fastify-swagger": "^4.8.4",
+    "is-docker": "^2.2.1",
     "make-promises-safe": "^5.1.0",
     "regenerator-runtime": "^0.13.9"
   }
