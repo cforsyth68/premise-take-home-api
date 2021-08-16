@@ -6,7 +6,7 @@ This Node project wraps the Breaking Bad API, it was built as an example of Char
 
 ## Documentation
 
-Launch application (See below), and browse to the following path: http://localhost:8000/api/v1
+Launch application (See below), and browse to the following path for swagger documentation: http://localhost:8000/
 
 ## Contribution
 
@@ -27,3 +27,17 @@ Launch application (See below), and browse to the following path: http://localho
 This command will run eslint, unit tests and prettification.
 
 `npm test`
+
+# Docker
+
+## `npm run docker:build`
+
+Builds the docker image.
+
+## `npm run docker:run`
+
+Runs the docker image locally.
+
+## `npm run docker:healthcheck`
+
+Checks the health of the docker image running on local machine

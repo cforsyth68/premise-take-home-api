@@ -2,7 +2,7 @@ FROM node:16
 
 RUN apt update && apt upgrade -y && apt autoclean -y && apt autoremove -y
 
-LABEL description="Example node server: basic"
+LABEL description="Premise take-home challenge API service"
 
 WORKDIR /app
 
