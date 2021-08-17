@@ -11,20 +11,19 @@ const build = (options) => {
 
   const app = fastify(settings);
 
-  app.register(fastifyCors, { origin: "*" });
-  // app.register(fastifyCors, () => (req, cb) => {
-  //   let corsOpts;
-  //   if (/localhost/.test(req.hostname)) {
-  //     // eslint-disable-next-line no-console
-  //     corsOpts = { origin: false };
-  //   } else {
-  //     corsOpts = {
-  //       origin: [`${config.protocol}://${config.address}`],
-  //       methods: ["GET"],
-  //     };
-  //   }
-  //   cb(null, corsOpts);
-  // });
+  //  app.register(fastifyCors, { origin: "*" });
+  app.register(fastifyCors, () => (req, cb) => {
+    let corsOpts;
+    if (/localhost/.test(req.hostname)) {
+      corsOpts = { origin: "*" };
+    } else {
+      corsOpts = {
+        origin: [`${config.protocol}://${config.address}`],
+        methods: ["GET"],
+      };
+    }
+    cb(null, corsOpts);
+  });
 
   app.register(fastifySwagger, swaggerConfig);
 
