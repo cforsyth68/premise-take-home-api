@@ -1,6 +1,4 @@
-import getByNameHandler from "../../controllers/characters";
-
-const searchOptions = {
+const routeOptions = {
   schema: {
     description: "Wrapper for Breaking Bad API, search by character name.",
     response: {
@@ -39,11 +37,10 @@ const searchOptions = {
         },
       },
     },
-    params: {
+    querystring: {
       name: { type: "string" },
     },
   },
-  handler: getByNameHandler,
 };
 
-export default searchOptions;
+export default routeOptions;

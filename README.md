@@ -36,16 +36,16 @@ This command will run eslint, unit tests and prettification.
 
 <br />
 
-## Docker
+## Build and Run within a Docker Container locally
 
-### `npm run docker:build`
+### 1\. `npm run docker:build`
 
 Builds the docker image.
 
-### `npm run docker:run`
+### 2\. `npm run docker:run`
 
 Runs the docker image locally.
 
-### `npm run docker:healthcheck`
+### 3\. `npm run docker:healthcheck`
 
 Checks the health of the docker image running on local machine
