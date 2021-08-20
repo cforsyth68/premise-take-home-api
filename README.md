@@ -1,6 +1,8 @@
 # REST API for Premise take-home project
 
-This Node project wraps the Breaking Bad API, it was built as an example of Charles Forsyth's coding ability for Premier.
+This Node project wraps the Breaking Bad API, it was built as an example of Charles Forsyth's coding ability for Premise.
+
+A web project was also created which consumes this API.
 
 ---
 

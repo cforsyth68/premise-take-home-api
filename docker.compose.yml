@@ -2,7 +2,7 @@ version: "3.8"
 services:
   fastify_api:
     container_name: fastify_api
-    image: forsyth/premier_api:0.0.1
+    image: forsyth/premise_api:0.0.1
     build:
       context: .
     ports:
